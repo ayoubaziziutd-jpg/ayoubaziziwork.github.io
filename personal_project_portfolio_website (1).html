@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayoub Azizi | Portfolio</title>
+  <style>
+    :root {
+      --primary: #0f172a;
+      --secondary: #334155;
+      --accent: #2563eb;
+      --bg: #f8fafc;
+      --card: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--primary);
+      line-height: 1.7;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 100;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 1.25rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav strong {
+      font-size: 1.1rem;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: var(--secondary);
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 4.5rem 2rem;
+    }
+
+    .hero {
+      padding-top: 6rem;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 720px;
+      font-size: 1.15rem;
+      color: var(--secondary);
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+      margin-bottom: 2.5rem;
+    }
+
+    .story p {
+      margin-bottom: 1.4rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 0.75rem;
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #020617;
+      color: #e5e7eb;
+      padding: 4rem 2rem;
+    }
+
+    footer h2 {
+      color: white;
+    }
+
+    .contact a {
+      display: block;
+      margin-bottom: 0.75rem;
+      color: #cbd5f5;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <strong>Ayoub Azizi</strong>
+    <div>
+      <a href="#story">My Story</a>
+      <a href="#work">My Work</a>
+      <a href="#connect">Let's Connect</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Actuarial Science • Analytics • Decision-Making</h1>
+  <p>
+    Actuarial Science graduate and Business Analytics & AI master’s student with a passion for
+    risk, data-driven modeling, and translating complex analysis into real-world decisions.
+  </p>
+</section>
+
+<section id="story">
+  <h2>My Story</h2>
+  <div class="card story">
+    <p>My story begins in my hometown in New Jersey, shaped early by two defining forces: math and soccer. My first and most influential mentor was my mother—a Moroccan immigrant, a gifted mathematician, and an exceptional teacher. From day one, she taught me everything she knew. Having her as a guide was a true cheat code: she made math intuitive and exciting, and her immigrant work ethic instilled a standard I learned to live by early on. Excellence was never optional; it was the expectation.</p>
+
+    <p>Math always came naturally, but the first time I truly felt the reward of disciplined effort was in sixth grade, when I placed first in my district in the NJ Math League competition. That moment mattered. A teacher pulled me aside and suggested I consider becoming an actuary. A seed was planted. I didn’t yet know how far it would grow, but the direction was set. By seventh grade, I had mastered the math section of the SAT.</p>
+
+    <p>At the same time, soccer was my other passion. I had played for as long as I could remember, competing at the highest levels in New Jersey while staying ahead academically. Math and soccer were never competing interests; they reinforced one another. One trained my analytical thinking, the other built discipline, resilience, and focus.</p>
+
+    <p>When I moved to Texas my freshman year of high school, the environment changed, but my mentality did not. The competition—both academically and athletically—was stronger. I played for FC Dallas and my high school varsity team while continuing to push academically, earning a perfect score on AP Calculus BC as a junior, scoring highly on AP Statistics as a senior, and performing strongly on the SAT. Even with a full schedule, I made time to give back—tutoring students of all ages in math and SAT preparation and training young athletes in soccer.</p>
+
+    <p>I chose the University of Texas at Dallas to pursue Actuarial Science, a major that unified everything I had been building since childhood: mathematical rigor, structured problem-solving, and long-term thinking. The transition to college was not smooth. I faced an identity conflict and academic challenges that demanded structure I had not yet developed.</p>
+
+    <p>Then came the turning point: I tore my ACL and meniscus. During the eleven months away from soccer, I slowed down, reassessed, and rebuilt. I taught myself how to study and immersed myself in the actuarial world—joining the Actuarial Club, attending company seminars, and discovering the depth of the profession.</p>
+
+    <p>Actuarial science became my intellectual passport. It opened doors to finance, programming, and advanced statistics. I learned that every dataset carries a narrative, and the real challenge is learning how to read it forward. Using the past as evidence, there are infinitely many ways to model and shape the future.</p>
+
+    <p>I built my foundation during sophomore and junior year and fully capitalized on it as a senior. I worked on hands-on projects in R, built dashboards in Tableau, and used SQL and Excel to structure data efficiently. Most importantly, I passed Actuarial Exams P and FM, developing discipline, confidence, and momentum.</p>
+
+    <p>Since graduating, I have continued building—earning certifications, preparing for my third actuarial exam, and competing in an actuarial case competition using a hybrid Chain-Ladder and Bornhuetter–Ferguson reserving approach.</p>
+
+    <p>It is now 2026, and I am pursuing a master’s degree in Business Analytics and AI. This program strengthens my actuarial foundation while expanding my reach into advanced analytics and data science. I am intentionally positioning myself to be versatile—ready to grow as an actuary or pivot into broader analytics roles wherever opportunity and impact align.</p>
+  </div>
+</section>
+
+<section id="work">
+  <h2>My Work</h2>
+  <div class="projects">
+    <div class="card project-card">
+      <h3>Property Insurance Portfolio Analysis</h3>
+      <p>Time-series analysis of premiums and loss ratios to identify portfolio shifts and emerging risk patterns.</p>
+      <a href="#">View Project</a>
+    </div>
+
+    <div class="card project-card">
+      <h3>Catastrophe Risk Shiny App</h3>
+      <p>Interactive R Shiny application modeling catastrophe loss scenarios and portfolio impacts.</p>
+      <a href="#">View Project</a>
+    </div>
+
+    <div class="card project-card">
+      <h3>Actuarial Case Competition</h3>
+      <p>Reserve estimation using a hybrid Chain-Ladder and Bornhuetter–Ferguson methodology.</p>
+      <a href="#">View Project</a>
+    </div>
+  </div>
+</section>
+
+<footer id="connect">
+  <section>
+    <h2>Let's Connect</h2>
+    <div class="contact">
+      <a href="mailto:your.email@email.com">your.email@email.com</a>
+      <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+    </div>
+  </section>
+</footer>
+
+</body>
+</html>
