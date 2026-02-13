@@ -10,183 +10,159 @@
       padding: 0;
       font-family: Arial, sans-serif;
       scroll-behavior: smooth;
+      background: #f8fafc;
     }
 
     /* HERO SECTION */
-.hero {
-  height: 100vh;
-  background-image:
-    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url("./hero.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
+    .hero {
+      height: 100vh;
+      background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("./hero.png");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
 
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
+    .hero h1 { font-size: 3.5rem; margin-bottom: 0.5rem; }
+    .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
 
-    .nav-buttons a {
+    .nav-buttons button {
       margin: 0 1rem;
       padding: 0.75rem 1.5rem;
       border: 2px solid white;
+      background: transparent;
       color: white;
-      text-decoration: none;
+      font-size: 1rem;
       font-weight: bold;
-      transition: background 0.3s, color 0.3s;
+      cursor: pointer;
+      transition: all 0.3s;
     }
 
-    .nav-buttons a:hover {
+    .nav-buttons button:hover {
       background: white;
       color: #0b3c5d;
     }
 
-    /* SECTIONS */
+    /* SECTION CONTROL */
     section {
-      min-height: 100vh;
+      display: none; /* Hidden by default */
       padding: 4rem 2rem;
       max-width: 900px;
       margin: auto;
+      animation: fadeIn 0.5s ease-in;
     }
 
-    h2 {
-      color: #0b3c5d;
-      margin-bottom: 1.5rem;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    .project {
-      margin-bottom: 2rem;
-    }
+    h2 { color: #0b3c5d; border-bottom: 2px solid #0b3c5d; padding-bottom: 10px; margin-bottom: 1.5rem; }
+    .project { margin-bottom: 2.5rem; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    .project h3 { margin-top: 0; color: #2563eb; }
+    .project a { color: #0b3c5d; font-weight: bold; text-decoration: underline; }
 
-    .project a {
-      color: #0b3c5d;
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #f4f4f4;
+    footer { text-align: center; padding: 2rem; background: #f4f4f4; margin-top: 2rem; }
+    
+    .back-home {
+        display: block;
+        margin-top: 2rem;
+        text-decoration: none;
+        color: #64748b;
+        font-weight: bold;
     }
   </style>
 </head>
 <body>
 
-  <!-- HERO / LANDING SCREEN -->
-  <div class="hero">
+  <div id="home" class="hero">
     <h1>Ayoub Azizi</h1>
     <p>Actuarial Science | Business Analytics | Data Modeling</p>
     <div class="nav-buttons">
-      <a href="#story">My Story</a>
-      <a href="#work">My Work</a>
-      <a href="#connect">Let’s Connect</a>
+      <button onclick="showSection('story')">My Story</button>
+      <button onclick="showSection('work')">My Work</button>
+      <button onclick="showSection('connect')">Let’s Connect</button>
     </div>
   </div>
 
-  <!-- MY STORY -->
   <section id="story">
     <h2>My Story</h2>
-    <p>
-     My story begins in my hometown in New Jersey, shaped early by two defining forces: math and soccer. The first influence came from my mother: a Moroccan immigrant, a gifted mathematician, and an exceptional teacher. From day one, she taught me everything she knew. Having her as my first mentor was a true cheat code: not only did she make math intuitive and exciting, but her immigrant work ethic set a standard I learned to live by. Excellence was never optional; it was the expectation.     </p>
-
-Math always came naturally, but the first time I truly felt the reward of disciplined effort was in sixth grade, when I placed first in my district in the NJ Math League competition. That moment mattered. My teacher pulled me aside and told me I should consider becoming an actuary. A seed was planted. I didn’t know then how far it would grow, but the direction was set. By seventh grade, I had mastered the math section of the SAT.
-At the same time, soccer was my other passion. I had played for as long as I could remember, competing at the highest levels in New Jersey while staying ahead academically. Math and soccer weren’t competing interests; they reinforced each other. One trained my mind, the other my discipline.
-When I moved to Texas my freshman year of high school, the environment changed, but the mentality did not. The competition, both academically and athletically was stronger. I played for FC Dallas and my high school varsity team while continuing to push academically, earning a perfect score on AP Calculus BC as a junior, scoring highly on AP Statistics as a senior, and performing strongly on the SAT.     </p>
-Even with a full schedule, I made time to give back. I tutored students of all ages in math and SAT preparation and trained young athletes in soccer. What started as helping others soon became something more meaningful. From apprentice to architect, I began building foundations for the next generation, offering the guidance I once sought and helping others surpass my own benchmarks.    </p>
-
-I chose the University of Texas at Dallas to pursue Actuarial Science, a major that unified everything I had been building since childhood: mathematical rigor, structured problem-solving, and long-term thinking. The transition to college, however, was not smooth. I had 2 problems: First, I was facing an identity crisis. While I loved math and had a growing interest in financial risk and data analysis, the kid in me still held onto dreams of becoming a professional soccer player. Second, I was seeing math I had never seen before, and for the first time what had always felt effortless now demanded structure. Structure that I didn’t have.
-Then came the turning point: I tore my ACL and meniscus. The universe has a way of easing our tough decisions; what felt like a "I've hit a wall” moment in my life turned out to be a pivotal redirection toward my true potential. 
-During the eleven months away from soccer, I was forced to slow down and reassess. I taught myself how to study—truly study—and immersed myself in the actuarial world. I joined the Actuarial Club, attended company seminars, and began to see the depth and beauty of the profession.     </p>
-Over time, my emotional attachment shifted. Actuarial science became my intellectual passport. It opened doors to finance, programming, and deeper layers of statistics and calculus. I learned that every dataset carries a narrative, and the real challenge is learning how to read it forward. Math had always felt absolute—defined by right and wrong—but actuarial work lives in the gray. Using the past as evidence, there are infinitely many ways to model, stress, and shape what the future might look like.
-I built my foundation during sophomore and junior year and fully capitalized on it as a senior. I applied my skills through hands-on projects in R, including a random forest tree simulator, built interactive dashboards in Tableau, and used SQL and Excel to clean, structure, and analyze data efficiently. Most importantly, I passed Actuarial Exams P and FM. Preparing for these exams elevated me to another level—teaching me how to manage time, work under pressure, and balance long-term goals with daily execution. From the outside, it looked like nonstop grinding. In reality, each exam sharpened my focus, strengthened my confidence, and created momentum. Once you pass one, you are driven to take the next. That is what I love about actuarial science: growth compounds quickly—across math, problem-solving, discipline, and career readiness.
-College, like any real journey, was a series of rises and falls. I didn’t erase my mistakes; I built on them. Like the Fibonacci sequence, each step grew from the last, and only later did I recognize the pattern. The golden ratio became a personal reminder that growth is not linear—but when it compounds, it creates something balanced and intentional.    </p>
-
-Since graduating, I have continued building: earning Coursera certifications, beginning preparation for my third actuarial exam, and taking on my most rewarding challenge yet—competing in an actuarial case competition where I calculated reserves using a hybrid Chain-Ladder and Bornhuetter–Ferguson approach. 
-It is now 2026, and I am pursuing a master’s degree in Business Analytics and AI, energized by the breadth of problems and industries ahead. This program allows me to deepen my technical foundation,strengthening my actuarial skill, while also expanding beyond traditional actuarial boundaries. I see this degree as a force multiplier. I am intentionally positioning myself to be versatile: prepared to grow as an actuary or to step into a new analytical domain if the opportunity demands it. I am motivated by learning, adaptable by design, and confident that wherever data, modeling, and decision-making intersect, I will add value and continue to grow.     </p>
-Thank you for reading my story
-
-    </p>
+    <p>My story begins in my hometown in New Jersey, shaped early by two defining forces: math and soccer. The first influence came from my mother: a Moroccan immigrant, a gifted mathematician, and an exceptional teacher. Excellence was never optional; it was the expectation.</p>
+    <p>Math always came naturally, but the reward of effort was cemented when I placed first in the NJ Math League. By seventh grade, I had mastered the math section of the SAT. Soccer trained my discipline, while math trained my mind. Moving to Texas, I played for FC Dallas while earning a perfect score on AP Calculus BC.</p>
+    <p>I chose UT Dallas for Actuarial Science to unify mathematical rigor with long-term thinking. After a setback with an ACL injury, I redirected my focus, teaching myself how to study and immersing myself in the actuarial world. I passed Exams P and FM, learning that growth compounds quickly across math, problem-solving, and discipline.</p>
+    <p>Now in 2026, I am pursuing my Master’s in Business Analytics and AI. I am positioning myself to be versatile: prepared to grow as an actuary or step into new analytical domains where data and decision-making intersect.</p>
+    <a href="javascript:void(0)" onclick="showSection('home')" class="back-home">← Back to Home</a>
   </section>
 
-<!-- MY WORK -->
-<section id="work">
-<h2>My Work</h2>
+  <section id="work">
+    <h2>My Work</h2>
 
+    <div class="project">
+      <h3>Modern College GPA Calculator</h3>
+      <p>Developed a cloud-integrated forecasting tool using TypeScript and Excel Office Scripts. Automated the conversion of letter grades to 4.0 scale points, allowing students to simulate "what-if" scenarios for their Cumulative GPA.</p>
+      <p><a href="https://cometmail-my.sharepoint.com/:x:/g/personal/axa200170_utdallas_edu/IQDt5ASloFVcTqcMOqIFjGVzAUN9qNJucIr93ur2qruGWGY?e=bdsWZT" target="_blank">Use the Tool</a></p>
+    </div>
 
-<div class="project">
-<h3>Actuarial Case Competition</h3>
-<p>
-Workers’ compensation reserving case competition using Chain Ladder and Bornhuetter–Ferguson methods. Estimated unpaid reserves and translated results into executive-level insights.
-</p>
-<p>
-<a href="https://cometmail-my.sharepoint.com/:p:/g/personal/axa200170_utdallas_edu/IQC7ivZA7UJSSJs1S6hRL4hdAZeQtNl-t4-_cmBruac_4e8?e=oUcvlk" target="_blank">View presentation</a>
-</p>
-</div>
+    <div class="project">
+      <h3>Actuarial Case Competition</h3>
+      <p>Estimated workers compensation unpaid claim reserves using Chain Ladder and Bornhuetter Ferguson methods. Evaluated model assumptions, compared reserve indications, and translated technical findings into clear business recommendations for decision makers.</p>
+      <p><a href="https://cometmail-my.sharepoint.com/:p:/g/personal/axa200170_utdallas_edu/IQC7ivZA7UJSSJs1S6hRL4hdAZeQtNl-t4-_cmBruac_4e8?e=oUcvlk" target="_blank">View Presentation</a></p>
+    </div>
 
+    <div class="project">
+      <h3>Credit Card Fraud Detection</h3>
+      <p>Built and validated classification models to detect fraudulent transactions using feature engineering and performance optimization. Analyzed precision recall tradeoffs and quantified the operational impact of false positives versus missed fraud.</p>
+      <p><a href="https://docs.google.com/presentation/d/1Z_SY6pjZU2n6vpOSB58NN7DxfvPc9lWLT8NyDDHCdOM/edit?usp=sharing" target="_blank">View Presentation</a></p>
+    </div>
 
-<div class="project">
-<h3>Credit Card Fraud Detection</h3>
-<p>
-Built and evaluated analytical models to identify fraudulent transactions, focusing on feature selection, classification accuracy, and real-world tradeoffs between false positives and detection rates.
-</p>
-<p>
-<a href="https://docs.google.com/presentation/d/1Z_SY6pjZU2n6vpOSB58NN7DxfvPc9lWLT8NyDDHCdOM/edit?usp=sharing" target="_blank">View presentation</a>
-</p>
-</div>
+    <div class="project">
+      <h3>Hotel Performance Analysis</h3>
+      <p>Explored hotel demand, pricing, and profitability data to identify revenue drivers and performance gaps. Delivered data driven insights to support pricing strategy and operational planning decisions.</p>
+      <p><a href="https://docs.google.com/document/d/1e__BQmIV8ZyXssGFrJelCsYXYSQlGA9mOGw6Wxgr1e8/edit?usp=sharing" target="_blank">View Analysis</a></p>
+    </div>
 
+    <div class="project">
+      <h3>Office Supply Chain Analysis</h3>
+      <p>Developed spreadsheet based analytical models to assess supply chain efficiency, inventory movement, and sales performance. Identified bottlenecks and proposed data backed improvements to strengthen cost control and distribution flow.</p>
+      <p><a href="https://docs.google.com/spreadsheets/d/1dhkTx5zomaVbERij0kzWKqHF0wDRcEOD/edit?usp=sharing" target="_blank">View Model</a></p>
+    </div>
 
-<div class="project">
-<h3>Hotel Performance Analysis</h3>
-<p>
-Analyzed hotel performance data to uncover trends in demand, pricing, and profitability, and provided data-driven recommendations to improve operational decision-making.
-</p>
-<p>
-<a href="https://docs.google.com/document/d/1e__BQmIV8ZyXssGFrJelCsYXYSQlGA9mOGw6Wxgr1e8/edit?usp=sharing" target="_blank">View analysis</a>
-</p>
-</div>
+    <a href="javascript:void(0)" onclick="showSection('home')" class="back-home">← Back to Home</a>
+  </section>
 
+  <section id="connect">
+    <h2>Let’s Connect</h2>
+    <p><strong>Email:</strong> <a href="mailto:ayoubaziziutd@gmail.com">ayoubaziziutd@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ayoubazizi/" target="_blank">linkedin.com/in/ayoubazizi/</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/ayoubaziziutd-jpg" target="_blank">github.com/ayoubaziziutd-jpg</a></p>
+    <a href="javascript:void(0)" onclick="showSection('home')" class="back-home">← Back to Home</a>
+  </section>
 
-<div class="project">
-<h3>Office Supply Chain Analysis</h3>
-<p>
-Conducted supply chain and sales analysis using spreadsheet-based modeling to evaluate efficiency, identify bottlenecks, and support inventory and distribution decisions.
-</p>
-<p>
-<a href="https://docs.google.com/spreadsheets/d/1dhkTx5zomaVbERij0kzWKqHF0wDRcEOD/edit?usp=sharing" target="_blank">View model</a>
-</p>
-</div>
+  <footer>
+    <p>© 2026 Ayoub Azizi</p>
+  </footer>
 
+  <script>
+    function showSection(sectionId) {
+      // Hide all sections and hero
+      document.getElementById('home').style.display = 'none';
+      document.getElementById('story').style.display = 'none';
+      document.getElementById('work').style.display = 'none';
+      document.getElementById('connect').style.display = 'none';
 
-</section>
-
-
-<!-- LET'S CONNECT -->
-<section id="connect">
-<h2>Let’s Connect</h2>
-<p>Email: ayoubaziziutd@gmail.com</p>
-<p>LinkedIn: <a href="https://www.linkedin.com" target="_blank">Your LinkedIn</a></p>
-<p>GitHub: <a href="https://github.com/AyoubAziziWork" target="_blank">GitHub</a></p>
-</section>
-
-
-<footer>
-<p>© 2026 Ayoub Azizi</p>
-</footer>
-
+      // Show the selected one
+      if (sectionId === 'home') {
+        document.getElementById('home').style.display = 'flex';
+      } else {
+        document.getElementById(sectionId).style.display = 'block';
+        window.scrollTo(0,0);
+      }
+    }
+  </script>
 
 </body>
 </html>
